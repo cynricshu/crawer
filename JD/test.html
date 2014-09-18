@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+        var domainName = getDomainName(), paras=(location.href.split(".html")[0]).split("-");
+        function getDomainName() {var domainN = location.hostname;if ( domainN.indexOf("360buy") > 0 ) {domainN = "360buy"+domainN.split("360buy")[1];} else if ( domainN.indexOf("jd") > 0 ) {domainN = "jd"+domainN.split("jd")[1];}return domainN;}
+        function isArea(urlArr) {return urlArr[1]==794 || urlArr[1]==6880 || urlArr[2]==655;}
+        var jd = {}; jd.plist = {}; jd.iplocation = { "北京": 1, "上海": 2, "天津": 3, "重庆": 4, "河北": 5, "山西": 6, "河南": 7, "辽宁": 8, "吉林": 9, "黑龙江": 10, "内蒙古": 11, "江苏": 12, "山东": 13, "安徽": 14, "浙江": 15, "福建": 16, "湖北": 17, "湖南": 18, "广东": 19, "广西": 20, "江西": 21, "四川": 22, "海南": 23, "贵州": 24, "云南": 25, "西藏": 26, "陕西": 27, "甘肃": 28, "青海": 29, "宁夏": 30, "新疆": 31, "台湾": 32, "香港": 42, "澳门": 43 };
+        jd.plist.getNameById = function(id) { for (var o in jd.iplocation) { if (jd.iplocation[o] == id) return o;} return "北京" ;};
+        jd.plist.cookieEditer = {getCookie: function(name) { var start = document.cookie.indexOf(name + "="); var len = start + name.length + 1; if ((!start) && (name != document.cookie.substring(0, name.length))) return null; if (start == -1) return null; var end = document.cookie.indexOf(';', len); if (end == -1) end = document.cookie.length; return unescape(document.cookie.substring(len, end)) }, setCookie: function(name, value, expires, path, domain, secure) { var today = new Date(); today.setTime(today.getTime()); if (expires) expires = expires * 1000 * 60 * 60 * 24; var expires_date = new Date(today.getTime() + (expires)); document.cookie = name + '=' + escape(value) + ((expires) ? ';expires=' + expires_date.toGMTString() : '') + ((path) ? ';path=' + path : '') + ((domain) ? ';domain=' + domain : '') + ((secure) ? ';secure' : ''); } };
+        jd.plist.locationProcess = function() {
+            var proid = this.cookieEditer.getCookie("ipLoc-djd");
+            if (!proid) proid = "1-72"; proid = proid.split("-"); if (proid[0]=="0" || !proid[1] || proid[0] > 1000000000 || proid[1] > 1000000000) { proid[0] = "1"; proid[1]="72" }
+            var url = location.href.toLowerCase(),pl=paras.length;
+            if (pl == 3) {
+                url = url.replace(".html", "-0-0-0-0-0-0-0-1-1-1-1-" + proid[0]+"-"+proid[1] + "-33.html");
+            } else if (pl == 13) { //手机、运营商支持一品多商和分区之前的不带库存的url长度=13
+                paras[13]=1;paras[14]=proid[0]; paras[15]=proid[1]; paras[16]="33"; url=paras.join("-")+".html";
+            } else if (pl == 14) { //手机、运营商支持一品多商至支持分区之间的不带库存的url长度=14
+                paras[14]=proid[0]; paras[15]=proid[1]; paras[16]="33"; url=paras.join("-")+".html";
+            } else if (pl == 15) { //手机、运营商支持一品多商和分区之前带库存的url长度=15
+                paras[13]=1;paras[14]=proid[0]; paras[15]=proid[1]; paras[16]="33"; url=paras.join("-")+".html";
+            } else if (pl == 16 && paras[1]=="794") { //大家电支持一品多商之前带库存的url长度=16
+                paras[16]=paras[15]; paras[15]=paras[14]; paras[14]=paras[13]; paras[13]=1;url=paras.join("-")+".html";
+            } else if (pl == 16 && paras[1]!="794") { //手机、运营商支持一品多商至分区之间带库存的url长度=16
+                paras[16]=paras[15]; paras[14]=proid[0]; paras[15]=proid[1];  url=paras.join("-")+".html";
+            } else if (pl == 17 && (paras[14]!=proid[0]||paras[15])!=proid[1]) {
+                this.cookieEditer.setCookie("ipLoc-djd", paras[14]+"-"+paras[15], 30, "/", domainName, false);
+                var proname = jd.plist.getNameById(paras[14]);
+                this.cookieEditer.setCookie("ipLocation", proname, 30, "/", domainName, false);
+            }
+            if (url != location.href.toLowerCase()) {
+                window.location = url;
+            }
+        };
+        if(isArea(paras)) {
+            jd.plist.locationProcess();
+        }
+    </script>
+    <title>联想（Lenovo）笔记本 【行情 价格 评价 正品行货】</title>
+<meta name="keywords" content="电脑、办公,电脑整机,联想（Lenovo）笔记本,联想（Lenovo）笔记本报价、促销、新闻、评论、导购、图片" />
+<meta name="description" content="京东JD.COM是国内最专业的电脑、办公,电脑整机,联想（Lenovo）笔记本,联想（Lenovo）笔记本网上购物商城，本频道提供电脑、办公,电脑整机,联想（Lenovo）笔记本,联想（Lenovo）笔记本的最新报价、促销、评论、导购、图片等相关信息" />
+
+    <script>var jdpts = new Object(); jdpts._st = new Date().getTime();</script>
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/lib/skin/2012/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/201007/skin/df/plist20130604.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/contrast/skin/2012/pop_compare.css?t=20121220" media="all" />
+    
+    <script type="text/javascript" src="http://misc.360buyimg.com/lib/js/e/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+</head>
+<body>
+<script type="text/javascript" src="http://misc.360buyimg.com/lib/js/2012/base-2011.js" charset="gb2312"></script>
+<div id="shortcut-2013">
+    <div class="w">
+        <ul class="fl lh">
+            <li class="fore1 ld"><b></b><a href="javascript:addToFavorite()" rel="nofollow">收藏京东</a></li>
+        </ul>
+        <ul class="fr lh">
+            <li class="fore1" id="loginbar">您好！欢迎来到京东！<a href="javascript:login()">[登录]</a>&nbsp;<a href="javascript:regist()">[免费注册]</a></li>
+            <li class="fore2 ld">
+                <s></s>
+                <a href="http://jd2008.jd.com/JdHome/OrderList.aspx" rel="nofollow">我的订单</a>
+            </li>
+            <li class="fore3 ld">
+                <s></s>
+                <a href="http://app.jd.com/" target="_blank">手机京东</a>
+            </li>
+            <li class="fore4 ld menu" id="biz-service" data-widget="dropdown">
+                <s></s>
+                <span class="outline"></span>
+                <span class="blank"></span>
+                客户服务
+                <b></b>
+                <div class="dd">
+                    <div><a href="http://help.jd.com/index.html" target="_blank">帮助中心</a></div>
+                    <div><a href="http://myjd.jd.com/repair/orderlist.action" target="_blank" rel="nofollow">售后服务</a></div>
+                    <div><a href="http://chat.jd.com/jdchat/custom.action" target="_blank" rel="nofollow">在线客服</a></div>
+                    <div><a href="http://myjd.jd.com/opinion/list.action" target="_blank" rel="nofollow">投诉中心</a></div>
+                    <div><a href="http://www.jd.com/contact/service.html" target="_blank">客服邮箱</a></div>
+                </div>
+            </li>
+            <li class="fore5 ld menu" id="site-nav" data-widget="dropdown">
+                <s></s>
+                <span class="outline"></span>
+                <span class="blank"></span>
+                网站导航
+                <b></b>
+                <div class="dd lh">
+                    <dl class="item fore1">
+                        <dt>特色栏目</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://my.jd.com/personal/guess.html">为我推荐</a></div>
+                            <div><a target="_blank" href="http://shipingou.jd.com/">视频购物</a></div>
+                            <div><a target="_blank" href="http://club.jd.com/">京东社区</a></div>
+                            <div><a target="_blank" href="http://xiaoyuan.jd.com/">校园频道</a></div>
+                            <div><a target="_blank" href="http://read.jd.com/">在线读书</a></div>
+                            <div><a target="_blank" href="http://diy.jd.com/">装机大师</a></div>
+                            <div><a target="_blank" href="http://market.jd.com/giftcard/">礼品卡</a></div>
+                        </dd>
+                    </dl>
+                    <dl class="item fore2">
+                        <dt>企业服务</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://market.jd.com/giftcard/company/default.aspx">企业客户</a></div>
+                            <div><a target="_blank" href="http://sale.jd.com/p10997.html">办公直通车</a></div>
+                        </dd>
+                    </dl>
+                    <dl class="item fore3">
+                        <dt>旗下网站</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://www.360top.com/">360TOP</a></div>
+                            <div><a target="_blank" href="http://www.minitiao.com/">迷你挑</a></div>
+                            <div><a target="_blank" href="http://en.360buy.com/">English Site</a></div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div><!--shortcut end-->
+<div id="o-header-2013">
+    <div class="w" id="header-2013">
+        <div id="logo-2013" class="ld"><a href="http://www.jd.com/" hidefocus="true"><b></b><img src="http://misc.360buyimg.com/lib/img/e/logo-201305.png" width="270" height="60" alt="京东"></a></div>
+        <!--logo end-->
+        <div id="search-2013">
+            <div class="i-search ld">
+                <ul id="shelper" class="hide">
+                </ul>
+                <div class="form">
+                    <input type="text" class="text" accesskey="s" id="key" autocomplete="off" onkeydown="javascript:if(event.keyCode==13) search('key');">
+                    <input type="button" value="搜索" class="button" onclick="search('key');return false;">
+                </div>
+            </div>
+            <div id="hotwords"></div>
+        </div>
+        <!--search end-->
+        <div id="my360buy-2013">
+            <dl>
+                <dt class="ld"><s></s><a href="http://home.jd.com/">我的京东</a><b></b></dt>
+                <dd>
+                    <div class="loading-style1"><b></b>加载中，请稍候...</div>
+                </dd>
+            </dl>
+        </div>
+        <!--my360buy end-->
+        <div id="settleup-2013">
+            <dl>
+                <dt class="ld"><s></s><span class="shopping"><span id="shopping-amount"></span></span><a href="http://cart.jd.com/cart/cart.html" id="settleup-url">去购物车结算</a> <b></b> </dt>
+                <dd>
+                    <div class="prompt">
+                        <div class="loading-style1"><b></b>加载中，请稍候...</div>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--settleup end-->
+    </div>
+    <!--header end-->
+    <div class="w">
+        <div id="nav-2013">
+            <div id="categorys-2013">
+                <div class="mt ld">
+                    <h2><a href="http://www.jd.com/allSort.aspx">全部商品分类<b></b></a></h2>
+                </div>
+                <div id="_JD_ALLSORT" class="mc"></div>
+            </div>
+            <div id="treasure"></div>
+            <ul id="navitems-2013">
+                <li class="fore1" id="nav-home"><a href="http://www.jd.com/">首页</a></li>
+                <li class="fore2" id="nav-fashion"><a href="http://fashion.jd.com/">服装城</a></li>
+                <li class="fore3" id="nav-chaoshi"><a href="http://channel.jd.com/chaoshi.html" target="_blank">京东超市</a></li>
+                <li class="fore4" id="nav-tuan"><a href="http://tuan.jd.com/" target="_blank">团购</a></li>
+                <li class="fore5" id="nav-auction"><a href="http://auction.jd.com/">夺宝岛</a></li>
+                <li class="fore6" id="nav-wan"><a href="http://wan.jd.com/">在线游戏</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+</script>
+<!-- header end -->
+<div class="w">
+    <div class="breadcrumb">
+        <strong><a href="http://channel.jd.com/computer.html" >电脑、办公</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.jd.com/670-671.html" >电脑整机</a>&nbsp;&gt;&nbsp;<a href="http://list.jd.com/670-671-672.html" >笔记本</a></span>
+&nbsp;&gt;&nbsp;<a href="http://list.jd.com/670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html" title="联想（Lenovo）">联想（Lenovo）</a>
+    </div>
+</div>
+<!--crumb end-->
+<div class="w main">
+    <div class="right-extra">
+        <div class="m" id="i-right">
+            <div id="hotsale" clstag="thirdtype|keycount|thirdtype|hotsaleM" reco_id="3"><div class="mt"><h2>热卖推荐</h2></div>
+                <!--热销商品-->
+                
+<div class="mc list-h" rfid=373><dl><dt><a href="http://item.jd.com/917166.html" target="_blank"><img alt="雷蛇（Razer）全球最轻薄游戏笔记本，首批到货疯抢！"src="http://img11.360buyimg.com/n4/g14/M07/02/0D/rBEhVVHHv3AIAAAAAAE-OwPGSakAAAeIgCVwqgAAT5T438.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/917166.html" target="_blank">雷蛇（Razer）全球最轻薄游戏笔记本，首批到货疯抢！<font color="#ff6600">灵于芯，刃于型。全球最薄游戏笔记本，耀世登场！京东全国独家销售！</font></a></div><div class="p-price"  sku='917166'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=917166&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl><dl><dt><a href="http://item.jd.com/884961.html" target="_blank"><img alt="联想扬天AMD处理器大屏本,现在购送50元京券"src="http://img11.360buyimg.com/n4/g12/M00/05/05/rBEQYFGQPY0IAAAAAAFzv9_mOCYAABArQGfZGcAAXPX810.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/884961.html" target="_blank">联想扬天AMD处理器大屏本,现在购送50元京券<font color="#ff6600"></font></a></div><div class="p-price"  sku='884961'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=884961&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl><dl><dt><a href="http://item.jd.com/766413.html" target="_blank"><img alt="戴尔性价比王，500G硬盘还带独显，入门级神机！"src="http://img13.360buyimg.com/n4/g9/M03/00/14/rBEHaVA3HEwIAAAAAAF3h8rsU7wAAAH9wMy0HcAAXef639.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/766413.html" target="_blank">戴尔性价比王，500G硬盘还带独显，入门级神机！<font color="#ff6600">戴尔性价比之王！2G内存，500G硬盘及独显，配置一应俱全；入门级神机！</font></a></div><div class="p-price"  sku='766413'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=766413&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl></div>
+
+            </div>
+            <div id="market" clstag="thirdtype|keycount|thirdtype|market"><div class="mt"><h2>促销活动</h2></div>
+                <div class="mc">
+                    <!--促销活动-->
+                    
+<ul><li>·<a href="http://www.jd.com/news.aspx?id=12471" target="_blank">华硕AMD主板超值满减！</a></li><li>·<a href="http://www.jd.com/news.aspx?id=12438" target="_blank">每满99减50，广博文具送清凉！</a></li><li>·<a href="http://www.jd.com/news.aspx?id=12403" target="_blank">寻找外星文明挑战赛</a></li><li>·<a href="http://www.jd.com/news.aspx?id=12381" target="_blank">大行夏日出游，买就赠</a></li><li>·<a href="http://www.jd.com/news.aspx?id=12308" target="_blank">罗技G100S套装送完美国际极致礼包</a></li></ul>
+
+                </div>
+            </div>
+        </div>
+        <div id='select' class='m' clstag='thirdtype|keycount|thirdtype|select'>
+<div class='mt'><h1>联想（Lenovo）笔记本<strong>&nbsp;-&nbsp;商品筛选</strong></h1><div class='extra'><a href='670-671-672.html'>重置筛选条件</a></div></div>
+<dl class='fore' id='select-brand'>
+<dt>品牌：</dt><dd><div class='content'>
+<div rel='0'><a id='0' href='670-671-672-0-0-0-0-0-0-0-1-1-1-1.html' >不限</a></div>
+<div rel='4'><a id='1311' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>联想（Lenovo）</a></div><div rel='3'><a id='1316' href='670-671-672-1316-0-0-0-0-0-0-1-1-1-1.html' >宏碁（Acer）</a></div><div rel='4'><a id='1319' href='670-671-672-1319-0-0-0-0-0-0-1-1-1-1.html' >联想（ThinkPad）</a></div><div rel='3'><a id='1314' href='670-671-672-1314-0-0-0-0-0-0-1-1-1-1.html' >华硕（ASUS）</a></div><div rel='1'><a id='1335' href='670-671-672-1335-0-0-0-0-0-0-1-1-1-1.html' >戴尔（DELL）</a></div><div rel='5'><a id='3363' href='670-671-672-3363-0-0-0-0-0-0-1-1-1-1.html' >苹果（Apple）</a></div><div rel='6'><a id='1322' href='670-671-672-1322-0-0-0-0-0-0-1-1-1-1.html' >索尼（SONY）</a></div><div rel='6'><a id='1327' href='670-671-672-1327-0-0-0-0-0-0-1-1-1-1.html' >三星 （SAMSUNG）</a></div><div rel='3'><a id='1309' href='670-671-672-1309-0-0-0-0-0-0-1-1-1-1.html' >惠普（HP）</a></div><div rel='4'><a id='411228' href='670-671-672-411228-0-0-0-0-0-0-1-1-1-1.html' >雷蛇（Razer）</a></div><div rel='6'><a id='14840' href='670-671-672-14840-0-0-0-0-0-0-1-1-1-1.html' >神舟（HASEE）</a></div><div rel='2'><a id='1324' href='670-671-672-1324-0-0-0-0-0-0-1-1-1-1.html' >富士通（Fujitsu）</a></div><div rel='7'><a id='140962' href='670-671-672-140962-0-0-0-0-0-0-1-1-1-1.html' >外星人（Alienware）</a></div><div rel='1'><a id='1326' href='670-671-672-1326-0-0-0-0-0-0-1-1-1-1.html' >东芝（TOSHIBA）</a></div><div rel='6'><a id='170491' href='670-671-672-170491-0-0-0-0-0-0-1-1-1-1.html' >Terrans Force</a></div><div rel='2'><a id='2280' href='670-671-672-2280-0-0-0-0-0-0-1-1-1-1.html' >Gateway</a></div><div rel='3'><a id='198238' href='670-671-672-198238-0-0-0-0-0-0-1-1-1-1.html' >技嘉（GIGABYTE）</a></div><div rel='5'><a id='7136' href='670-671-672-7136-0-0-0-0-0-0-1-1-1-1.html' >清华同方（Tongfang）</a></div><div rel='7'><a id='1331' href='670-671-672-1331-0-0-0-0-0-0-1-1-1-1.html' >微星（MSI）</a></div><div rel='3'><a id='3052' href='670-671-672-3052-0-0-0-0-0-0-1-1-1-1.html' >海尔（Haier）</a></div><div rel='5'><a id='70261' href='670-671-672-70261-0-0-0-0-0-0-1-1-1-1.html' >七喜（HEDY）</a></div></div>
+</dd></dl>
+<dl >
+<dt>价格：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='8668' href='670-671-672-1311-8668-0-0-0-0-0-1-1-1-1.html' >1000-2999</a></div><div rel='0'><a id='1340' href='670-671-672-1311-1340-0-0-0-0-0-1-1-1-1.html' >3000-3499</a></div><div rel='0'><a id='60124' href='670-671-672-1311-60124-0-0-0-0-0-1-1-1-1.html' >3500-3999</a></div><div rel='0'><a id='1344' href='670-671-672-1311-1344-0-0-0-0-0-1-1-1-1.html' >4000-4499</a></div><div rel='0'><a id='60125' href='670-671-672-1311-60125-0-0-0-0-0-1-1-1-1.html' >4500-4999</a></div><div rel='0'><a id='1346' href='670-671-672-1311-1346-0-0-0-0-0-1-1-1-1.html' >5000-5999</a></div><div rel='0'><a id='1348' href='670-671-672-1311-1348-0-0-0-0-0-1-1-1-1.html' >6000-6999</a></div><div rel='0'><a id='1349' href='670-671-672-1311-1349-0-0-0-0-0-1-1-1-1.html' >7000-9999</a></div><div rel='0'><a id='1355' href='670-671-672-1311-1355-0-0-0-0-0-1-1-1-1.html' >10000以上</a></div><div rel='0'><a id='105388' href='670-671-672-1311-105388-0-0-0-0-0-1-1-1-1.html' >尾货清仓</a></div></dd></dl>
+<dl >
+<dt>尺寸：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='8580' href='670-671-672-1311-0-8580-0-0-0-0-1-1-1-1.html' >8.9英寸及以下</a></div><div rel='0'><a id='8654' href='670-671-672-1311-0-8654-0-0-0-0-1-1-1-1.html' >11英寸</a></div><div rel='0'><a id='1363' href='670-671-672-1311-0-1363-0-0-0-0-1-1-1-1.html' >12英寸</a></div><div rel='0'><a id='1365' href='670-671-672-1311-0-1365-0-0-0-0-1-1-1-1.html' >13英寸</a></div><div rel='0'><a id='1367' href='670-671-672-1311-0-1367-0-0-0-0-1-1-1-1.html' >14英寸</a></div><div rel='0'><a id='1369' href='670-671-672-1311-0-1369-0-0-0-0-1-1-1-1.html' >15英寸</a></div><div rel='0'><a id='4731' href='670-671-672-1311-0-4731-0-0-0-0-1-1-1-1.html' >16英寸-17英寸</a></div><div rel='0'><a id='1378' href='670-671-672-1311-0-1378-0-0-0-0-1-1-1-1.html' >17英寸以上</a></div></dd></dl>
+<dl >
+<dt>触控：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='345354' href='670-671-672-1311-0-0-345354-0-0-0-1-1-1-1.html' >普通触控</a></div><div rel='0'><a id='345356' href='670-671-672-1311-0-0-345356-0-0-0-1-1-1-1.html' >变形触控</a></div><div rel='0'><a id='345359' href='670-671-672-1311-0-0-345359-0-0-0-1-1-1-1.html' >非触控</a></div></dd></dl>
+<dl >
+<dt>处理器：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='309145' href='670-671-672-1311-0-0-0-309145-0-0-1-1-1-1.html' >Intel i3</a></div><div rel='0'><a id='309146' href='670-671-672-1311-0-0-0-309146-0-0-1-1-1-1.html' >Intel i5</a></div><div rel='0'><a id='309147' href='670-671-672-1311-0-0-0-309147-0-0-1-1-1-1.html' >Intel i7</a></div><div rel='0'><a id='309149' href='670-671-672-1311-0-0-0-309149-0-0-1-1-1-1.html' >AMD A6</a></div><div rel='0'><a id='309151' href='670-671-672-1311-0-0-0-309151-0-0-1-1-1-1.html' >AMD A8</a></div><div rel='0'><a id='309153' href='670-671-672-1311-0-0-0-309153-0-0-1-1-1-1.html' >AMD A10</a></div><div rel='0'><a id='309148' href='670-671-672-1311-0-0-0-309148-0-0-1-1-1-1.html' >其他 Intel平台</a></div><div rel='0'><a id='309155' href='670-671-672-1311-0-0-0-309155-0-0-1-1-1-1.html' >其他AMD平台</a></div></dd></dl>
+<dl >
+<dt>厚度：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='309163' href='670-671-672-1311-0-0-0-0-309163-0-1-1-1-1.html' >刀锋轻薄（<17.5mm）</a></div><div rel='0'><a id='309166' href='670-671-672-1311-0-0-0-0-309166-0-1-1-1-1.html' >便携轻薄（17.5mm – 21mm）</a></div><div rel='0'><a id='309167' href='670-671-672-1311-0-0-0-0-309167-0-1-1-1-1.html' >普通轻薄（21mm-25mm）</a></div><div rel='0'><a id='309169' href='670-671-672-1311-0-0-0-0-309169-0-1-1-1-1.html' >正常厚度（>25mm）</a></div></dd></dl>
+<dl >
+<dt>显卡：</dt><dd><div rel='0'><a id='0' href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='curr'>不限</a></div>
+<div rel='0'><a id='312894' href='670-671-672-1311-0-0-0-0-0-312894-1-1-1-1.html' >入门级独显</a></div><div rel='0'><a id='312897' href='670-671-672-1311-0-0-0-0-0-312897-1-1-1-1.html' >性能级独显</a></div><div rel='0'><a id='312903' href='670-671-672-1311-0-0-0-0-0-312903-1-1-1-1.html' >玩家级独显</a></div><div rel='0'><a id='312907' href='670-671-672-1311-0-0-0-0-0-312907-1-1-1-1.html' >专业图形处理独显</a></div><div rel='0'><a id='312910' href='670-671-672-1311-0-0-0-0-0-312910-1-1-1-1.html' >集成显卡</a></div></dd></dl>
+</div><!--select end -->
+<div id='advanced'><div><a href='http://www.jd.com/plistSearch.aspx?sort0=670&sort1=671&sort2=672'>高级搜索</a><b></b></div></div>
+<div id='filter'  clstag='thirdtype|keycount|thirdtype|filter'>
+<div class='fore1'>
+<dl class='order'><dt>排序：</dt>
+<dd class='curr' ><a href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html'>销量</a><b></b></dd>
+<dd><b></b><a href='670-671-672-1311-0-0-0-0-0-0-1-3-1-1.html' rel='nofollow'>价格</a><b></b></dd>
+<dd><a href='670-671-672-1311-0-0-0-0-0-0-1-4-1-1.html' rel='nofollow'>评论数</a><b></b></dd>
+<dd><a href='670-671-672-1311-0-0-0-0-0-0-1-5-1-1.html' rel='nofollow'>上架时间</a><b></b></dd>
+</dl>
+<div class='pagin pagin-m'><span class='text'><i>1</i>/4</span>
+<span class="prev-disabled">上一页<b></b></span>
+<a class="next" href="670-671-672-1311-0-0-0-0-0-0-1-1-2-1.html">下一页<b></b></a>
+</div>
+<div class='total'><span>共<strong>111</strong>个商品</span></div>
+<span class='clr'></span>
+</div>
+<div class='fore2 form'><dl class='store'>
+<dt>库存：</dt>
+<dd id='store-selector' class=''>
+<div class='text'>请选择省份<b></b></div>
+<div class='content'>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1-0-0.html'>全国</a>
+<dl>
+<dt>请选择省份</dt><dd><a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-1-0.html" p="1">北京</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-3-0.html" p="3">天津</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-5-0.html" p="5">河北</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-13-0.html" p="13">山东</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-6-0.html" p="6">山西</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-7-0.html" p="7">河南</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-17-0.html" p="17">湖北</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-8-0.html" p="8">辽宁</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-9-0.html" p="9">吉林</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-10-0.html" p="10">黑龙江</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-11-0.html" p="11">内蒙古</a></dd>
+<dt>请选择省份</dt><dd><a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-2-0.html" p="2">上海</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-12-0.html" p="12">江苏</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-15-0.html" p="15">浙江</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-14-0.html" p="14">安徽</a></dd>
+<dt>请选择省份</dt><dd><a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-19-0.html" p="19">广东</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-20-0.html" p="20">广西</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-16-0.html" p="16">福建</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-18-0.html" p="18">湖南</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-21-0.html" p="21">江西</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-23-0.html" p="23">海南</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-32-0.html" p="32">台湾</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-42-0.html" p="42">香港</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-43-0.html" p="43">澳门</a></dd>
+<dt>请选择省份</dt><dd><a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-22-0.html" p="22">四川</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-4-0.html" p="4">重庆</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-27-0.html" p="27">陕西</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-24-0.html" p="24">贵州</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-25-0.html" p="25">云南</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-26-0.html" p="26">西藏</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-28-0.html" p="28">甘肃</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-29-0.html" p="29">青海</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-30-0.html" p="30">宁夏</a>、<a href="670-671-672-1311-0-0-0-0-0-0-1-1-1-1-31-0.html" p="31">新疆</a></dd>
+</dl>
+</div>
+<div class='close' onclick="$('#store-selector').removeClass('hover')"></div>
+</dd>
+<dd class='instock'><div class="disabled"><b></b>仅显示有货</div>
+</dd>
+</dl>
+<dl class='type'>
+<dt>配送类型：</dt>
+<dd class='selected'><a href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html'><b></b>全部</a></dd>
+<dd><a href='670-671-672-1311-0-0-0-0-0-0-4-1-1-1.html'><b></b>京东配送</a></dd>
+<dd><a href='670-671-672-1311-0-0-0-0-0-0-3-1-1-1.html'><b></b>第三方配送</a></dd>
+</dl>
+<span class='clr'></span>
+</div>
+</div>
+<script type="text/javascript">var stockiplocation = { "北京": { id: "1", root: 0, djd: 1, c: 72 }, "上海": { id: "2", root: 1, djd: 1, c: 78 }, "天津": { id: "3", root: 0, djd: 1, c: 51035 }, "重庆": { id: "4", root: 3, djd: 1, c: 113 }, "河北": { id: "5", root: 0, djd: 1, c: 142 }, "山西": { id: "6", root: 0, djd: 1, c: 303 }, "河南": { id: "7", root: 0, djd: 1, c: 412 }, "辽宁": { id: "8", root: 0, djd: 1, c: 560 }, "吉林": { id: "9", root: 0, djd: 1, c: 639 }, "黑龙江": { id: "10", root: 0, djd: 1, c: 698 }, "内蒙古": { id: "11", root: 0, djd: 0, c: 799 }, "江苏": { id: "12", root: 1, djd: 1, c: 904 }, "山东": { id: "13", root: 0, djd: 1, c: 1000 }, "安徽": { id: "14", root: 1, djd: 1, c: 1116 }, "浙江": { id: "15", root: 1, djd: 1, c: 1158 }, "福建": { id: "16", root: 2, djd: 1, c: 1303 }, "湖北": { id: "17", root: 0, djd: 1, c: 1381 }, "湖南": { id: "18", root: 2, djd: 1, c: 1482 }, "广东": { id: "19", root: 2, djd: 1, c: 1601 }, "广西": { id: "20", root: 2, djd: 1, c: 1715 }, "江西": { id: "21", root: 2, djd: 1, c: 1827 }, "四川": { id: "22", root: 3, djd: 1, c: 1930 }, "海南": { id: "23", root: 2, djd: 1, c: 2121 }, "贵州": { id: "24", root: 3, djd: 1, c: 2144 }, "云南": { id: "25", root: 3, djd: 1, c: 2235 }, "西藏": { id: "26", root: 3, djd: 0, c: 2951 }, "陕西": { id: "27", root: 3, djd: 1, c: 2376 }, "甘肃": { id: "28", root: 3, djd: 1, c: 2487 }, "青海": { id: "29", root: 3, djd: 0, c: 2580 }, "宁夏": { id: "30", root: 3, djd: 1, c: 2628 }, "新疆": { id: "31", root: 3, djd: 0, c: 2652 }, "台湾": { id: "32", root: 2, djd: 0, c: 2768 }, "香港": { id: "42", root: 2, djd: 0, c: 2754 }, "澳门": { id: "43", root: 2, djd: 0, c: 2770} }; var stockgetNameById = function(id) { for (var o in stockiplocation) { if (stockiplocation[o].id == id) return o; } return "北京"; }; function setDjdCookie(p, c) { var a = jd.plist.cookieEditer.getCookie("ipLoc-djd"); if (!a || a.split("-")[0] != p) jd.plist.cookieEditer.setCookie("ipLoc-djd", p + (c ? ("-" + c) : ""), 30, "/", domainName, false); } $("#store-selector .content").find("a").click(function() { var proid = $(this).attr("p"); if (!proid) proid = 1; var proname = stockgetNameById(proid); jd.plist.cookieEditer.setCookie("ipLocation", proname, 30, "/", domainName, false); setDjdCookie(proid, stockiplocation[proname].c); }).end().hoverForIE6(); </script>
+<div class="m plist-n7a" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
+<ul class="list-h">
+<li onclick='log(7,3,853231)' sku='853231'><div class='p-img'><a target='_blank'  href='http://item.jd.com/853231.html'><img width='220' height='220' alt='联想（Lenovo） Y400M 14.0英寸笔记本电脑（i5-3230M 4G 1T 2G独显 摄像头 DVD刻录 Win8）' src='http://img11.360buyimg.com/n7/g10/M00/0C/0A/rBEQWFFINpEIAAAAAAENu92M7ikAACaEAEAr2sAAQ3T536.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/853231.html'>联想（Lenovo） Y400M 14.0英寸笔记本电脑（i5-3230M 4G 1T 2G独显 摄像头 DVD刻录 Win8）<font style='color: #ff0000' class='adwords' name='853231'></font></a></div><div id='djd853231' class='p-price'><strong></strong><span id='p853231'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/853231-1-1.html'>已有2383人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,853231)' href='http://gate.jd.com/InitCart.aspx?pid=853231&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll853231' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_853231' skuid='853231'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,882186)' sku='882186'><div class='p-img'><a target='_blank'  href='http://item.jd.com/882186.html'><img width='220' height='220' alt='联想（Lenovo） G480A 14.0英寸笔记本电脑（i5-2450M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）' src='http://img11.360buyimg.com/n7/g8/M02/12/0D/rBEHZ1Dv0qwIAAAAAAFB1xH3-wMAADmUQCVRPQAAUHv294.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/882186.html'>联想（Lenovo） G480A 14.0英寸笔记本电脑（i5-2450M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）<font style='color: #ff0000' class='adwords' name='882186'></font></a></div><div id='djd882186' class='p-price'><strong></strong><span id='p882186'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/882186-1-1.html'>已有1204人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,882186)' href='http://gate.jd.com/InitCart.aspx?pid=882186&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll882186' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_882186' skuid='882186'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,811030)' sku='811030'><div class='p-img'><a target='_blank'  href='http://item.jd.com/811030.html'><img width='220' height='220' alt='联想（Lenovo）U310-IFI 13.3英寸超极本（i5-3317U 4G 500G 24G固态硬盘 蓝牙 Win8）暮光灰' src='http://img10.360buyimg.com/n7/g10/M00/02/0D/rBEQWFELcVYIAAAAAAFsNHXGQ0wAAAeUwGs4bwAAWxM823.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/811030.html'>联想（Lenovo）U310-IFI 13.3英寸超极本（i5-3317U 4G 500G 24G固态硬盘 蓝牙 Win8）暮光灰<font style='color: #ff0000' class='adwords' name='811030'></font></a></div><div id='djd811030' class='p-price'><strong></strong><span id='p811030'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/811030-1-1.html'>已有2642人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='btns'><a onclick='log(1,7,811030)' href='http://gate.jd.com/InitCart.aspx?pid=811030&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll811030' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_811030' skuid='811030'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,853236)' sku='853236'><div class='p-img'><a target='_blank'  href='http://item.jd.com/853236.html'><img width='220' height='220' alt='联想（Lenovo） Y400N 14.0英寸笔记本电脑（i5-3230M 4G 1T 2G独显 摄像头 DVD刻 Win8）' src='http://img11.360buyimg.com/n7/g10/M00/0C/0A/rBEQWFFINpEIAAAAAAENu92M7ikAACaEAEAr2sAAQ3T536.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/853236.html'>联想（Lenovo） Y400N 14.0英寸笔记本电脑（i5-3230M 4G 1T 2G独显 摄像头 DVD刻 Win8）<font style='color: #ff0000' class='adwords' name='853236'></font></a></div><div id='djd853236' class='p-price'><strong></strong><span id='p853236'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/853236-1-1.html'>已有512人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='btns'><a onclick='log(1,7,853236)' href='http://gate.jd.com/InitCart.aspx?pid=853236&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll853236' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_853236' skuid='853236'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,891621)' sku='891621'><div class='p-img'><a target='_blank'  href='http://item.jd.com/891621.html'><img width='220' height='220' alt='联想（Lenovo）扬天 B490A-ITH(L) 14英寸笔记本电脑 （i3-3110M 2G 500G 1G独显 D刻 摄像头Linux）黑色' src='http://img11.360buyimg.com/n7/g10/M00/08/13/rBEQWFE4VKEIAAAAAAExdEItM5AAABregMhRBsAATGM252.jpg' data-img="1"/></a><div class='pi2'></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/891621.html'>联想（Lenovo）扬天 B490A-ITH(L) 14英寸笔记本电脑 （i3-3110M 2G 500G 1G独显 D刻 摄像头Linux）黑色<font style='color: #ff0000' class='adwords' name='891621'></font></a></div><div id='djd891621' class='p-price'><strong></strong><span id='p891621'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/891621-1-1.html'>已有267人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='btns'><a onclick='log(1,7,891621)' href='http://gate.jd.com/InitCart.aspx?pid=891621&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll891621' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_891621' skuid='891621'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,807057)' sku='807057'><div class='p-img'><a target='_blank'  href='http://item.jd.com/807057.html'><img width='220' height='220' alt='联想（lenovo）扬天B490 14英寸笔记本电脑（i3-2348 2G 500G 1G独显 D刻 摄像头 Linux）' src='http://img12.360buyimg.com/n7/g10/M00/08/13/rBEQWFE4VKEIAAAAAAExdEItM5AAABregMhRBsAATGM252.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/807057.html'>联想（lenovo）扬天B490 14英寸笔记本电脑（i3-2348 2G 500G 1G独显 D刻 摄像头 Linux）<font style='color: #ff0000' class='adwords' name='807057'></font></a></div><div id='djd807057' class='p-price'><strong></strong><span id='p807057'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/807057-1-1.html'>已有1526人评价</a></span><span class='reputation'>(91%好评)</span></div><div class='btns'><a onclick='log(1,7,807057)' href='http://gate.jd.com/InitCart.aspx?pid=807057&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll807057' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_807057' skuid='807057'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,889647)' sku='889647'><div class='p-img'><a target='_blank'  href='http://item.jd.com/889647.html'><img width='220' height='220' alt='联想（Lenovo） U310-ITH 13.3英寸超极本（i3-3227U 4G 500G 24G固态硬盘 摄像头 蓝牙 Win8）暮光灰' src='http://img12.360buyimg.com/n7/g10/M00/04/0A/rBEQWVElumcIAAAAAAFaaLvlg60AAA17wLSwd8AAVqA514.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/889647.html'>联想（Lenovo） U310-ITH 13.3英寸超极本（i3-3227U 4G 500G 24G固态硬盘 摄像头 蓝牙 Win8）暮光灰<font style='color: #ff0000' class='adwords' name='889647'></font></a></div><div id='djd889647' class='p-price'><strong></strong><span id='p889647'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/889647-1-1.html'>已有154人评价</a></span><span class='reputation'>(87%好评)</span></div><div class='btns'><a onclick='log(1,7,889647)' href='http://gate.jd.com/InitCart.aspx?pid=889647&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll889647' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_889647' skuid='889647'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,896978)' sku='896978'><div class='p-img'><a target='_blank'  href='http://item.jd.com/896978.html'><img width='220' height='220' alt='联想（Lenovo） Z500A-ISE 15.6英寸笔记本电脑（i7-3612QM 4G 1TB 2G独显 摄像头 DVD刻录）' src='http://img13.360buyimg.com/n7/g12/M00/0A/11/rBEQYVGithQIAAAAAADM5BixmpQAACDuAL4e48AAMz8647.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/896978.html'>联想（Lenovo） Z500A-ISE 15.6英寸笔记本电脑（i7-3612QM 4G 1TB 2G独显 摄像头 DVD刻录）<font style='color: #ff0000' class='adwords' name='896978'></font></a></div><div id='djd896978' class='p-price'><strong></strong><span id='p896978'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/896978-1-1.html'>已有161人评价</a></span><span class='reputation'>(84%好评)</span></div><div class='btns'><a onclick='log(1,7,896978)' href='http://gate.jd.com/InitCart.aspx?pid=896978&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll896978' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_896978' skuid='896978'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,912888)' sku='912888'><div class='p-img'><a target='_blank'  href='http://item.jd.com/912888.html'><img width='220' height='220' alt='联想（Lenovo） Y500N 15.6英寸笔记本电脑（i5-3230M 8G 1T 2x2G独显 摄像头 Win8）灰色' data-lazyload='http://img13.360buyimg.com/n7/g13/M09/03/03/rBEhVFHNM4kIAAAAAAGCgyLWRjIAAAmrwBe31gAAYKb148.jpg' data-img="1"/></a><div class='pi7'></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/912888.html'>联想（Lenovo） Y500N 15.6英寸笔记本电脑（i5-3230M 8G 1T 2x2G独显 摄像头 Win8）灰色<font style='color: #ff0000' class='adwords' name='912888'></font></a></div><div id='djd912888' class='p-price'><strong></strong><span id='p912888'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/912888-1-1.html'>已有45人评价</a></span><span class='reputation'>(84%好评)</span></div><div class='btns'><a onclick='log(1,7,912888)' href='http://gate.jd.com/InitCart.aspx?pid=912888&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll912888' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_912888' skuid='912888'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,858439)' sku='858439'><div class='p-img'><a target='_blank'  href='http://item.jd.com/858439.html'><img width='220' height='220' alt='联想（Lenovo）扬天V480s 14.0英寸笔记本电脑 （i5-3230M 4G 1T 2G独显 摄像头 Win8)' data-lazyload='http://img14.360buyimg.com/n7/g12/M00/03/06/rBEQYVGJ7SkIAAAAAAF_-b0tuooAAAn3QEzqcsAAYAR712.jpg' data-img="1"/></a><div class='pi3'></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/858439.html'>联想（Lenovo）扬天V480s 14.0英寸笔记本电脑 （i5-3230M 4G 1T 2G独显 摄像头 Win8)<font style='color: #ff0000' class='adwords' name='858439'></font></a></div><div id='djd858439' class='p-price'><strong></strong><span id='p858439'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/858439-1-1.html'>已有218人评价</a></span><span class='reputation'>(88%好评)</span></div><div class='btns'><a onclick='log(1,7,858439)' href='http://gate.jd.com/InitCart.aspx?pid=858439&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll858439' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_858439' skuid='858439'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,852970)' sku='852970'><div class='p-img'><a target='_blank'  href='http://item.jd.com/852970.html'><img width='220' height='220' alt='联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）星海蓝' data-lazyload='http://img10.360buyimg.com/n7/g5/M02/12/02/rBEIC0_tYOAIAAAAAAJDZ9kPWkQAADh2QO_5iQAAkN_656.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/852970.html'>联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）星海蓝<font style='color: #ff0000' class='adwords' name='852970'></font></a></div><div id='djd852970' class='p-price'><strong></strong><span id='p852970'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/852970-1-1.html'>已有255人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='btns'><a onclick='log(1,7,852970)' href='http://gate.jd.com/InitCart.aspx?pid=852970&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll852970' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_852970' skuid='852970'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,852968)' sku='852968'><div class='p-img'><a target='_blank'  href='http://item.jd.com/852968.html'><img width='220' height='220' alt='联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）暮光灰' data-lazyload='http://img13.360buyimg.com/n7/g8/M03/00/12/rBEHaFA1-xQIAAAAAADMN-2zogIAAAHYgLMTIEAAMxP399.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/852968.html'>联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）暮光灰<font style='color: #ff0000' class='adwords' name='852968'></font></a></div><div id='djd852968' class='p-price'><strong></strong><span id='p852968'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/852968-1-1.html'>已有192人评价</a></span><span class='reputation'>(88%好评)</span></div><div class='btns'><a onclick='log(1,7,852968)' href='http://gate.jd.com/InitCart.aspx?pid=852968&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll852968' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_852968' skuid='852968'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,852969)' sku='852969'><div class='p-img'><a target='_blank'  href='http://item.jd.com/852969.html'><img width='220' height='220' alt='联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）烈焰红' data-lazyload='http://img14.360buyimg.com/n7/g9/M03/07/1D/rBEHalBkJLsIAAAAAAEBSC7bcTkAABjAgAst7wAAQFg970.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/852969.html'>联想（Lenovo） U410-IFI 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 Win8）烈焰红<font style='color: #ff0000' class='adwords' name='852969'></font></a></div><div id='djd852969' class='p-price'><strong></strong><span id='p852969'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/852969-1-1.html'>已有144人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='btns'><a onclick='log(1,7,852969)' href='http://gate.jd.com/InitCart.aspx?pid=852969&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll852969' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_852969' skuid='852969'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,884961)' sku='884961'><div class='p-img'><a target='_blank'  href='http://item.jd.com/884961.html'><img width='220' height='220' alt='联想（Lenovo） 扬天B575eL-EON 15英寸笔记本电脑 （E1-1500 2G 500G D刻 摄像头)' data-lazyload='http://img11.360buyimg.com/n7/g12/M00/05/05/rBEQYFGQPY0IAAAAAAFzv9_mOCYAABArQGfZGcAAXPX810.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/884961.html'>联想（Lenovo） 扬天B575eL-EON 15英寸笔记本电脑 （E1-1500 2G 500G D刻 摄像头)<font style='color: #ff0000' class='adwords' name='884961'></font></a></div><div id='djd884961' class='p-price'><strong></strong><span id='p884961'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/884961-1-1.html'>已有74人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,884961)' href='http://gate.jd.com/InitCart.aspx?pid=884961&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll884961' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_884961' skuid='884961'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,913093)' sku='913093'><div class='p-img'><a target='_blank'  href='http://item.jd.com/913093.html'><img width='220' height='220' alt='联想（Lenovo） G500AT 15.6英寸笔记本电脑（i5-3230M 4G 500G 2G独显 D刻 摄像头 Linpus） 黑色' data-lazyload='http://img13.360buyimg.com/n7/g15/M02/01/1A/rBEhWFHBcHIIAAAAAAE4KBfPJYAAAAW5QEZeGkAAThA655.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/913093.html'>联想（Lenovo） G500AT 15.6英寸笔记本电脑（i5-3230M 4G 500G 2G独显 D刻 摄像头 Linpus） 黑色<font style='color: #ff0000' class='adwords' name='913093'></font></a></div><div id='djd913093' class='p-price'><strong></strong><span id='p913093'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/913093-1-1.html'>已有26人评价</a></span><span class='reputation'>(81%好评)</span></div><div class='btns'><a onclick='log(1,7,913093)' href='http://gate.jd.com/InitCart.aspx?pid=913093&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll913093' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_913093' skuid='913093'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,780941)' sku='780941'><div class='p-img'><a target='_blank'  href='http://item.jd.com/780941.html'><img width='220' height='220' alt='联想（Lenovo）U510-IFI 15.6英寸笔记本电脑（i5-3317U 4G 500G 1G独显 D刻 摄像头 Linpus Lite） 暮光灰' data-lazyload='http://img11.360buyimg.com/n7/g7/M03/10/1F/rBEHZVDQBpgIAAAAAAF7qsnIOFIAADURwFCGSIAAXvC428.jpg' data-img="1"/></a><div class='pi23'></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/780941.html'>联想（Lenovo）U510-IFI 15.6英寸笔记本电脑（i5-3317U 4G 500G 1G独显 D刻 摄像头 Linpus Lite） 暮光灰<font style='color: #ff0000' class='adwords' name='780941'></font></a></div><div id='djd780941' class='p-price'><strong></strong><span id='p780941'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/780941-1-1.html'>已有116人评价</a></span><span class='reputation'>(82%好评)</span></div><div class='btns'><a onclick='log(1,7,780941)' href='http://gate.jd.com/InitCart.aspx?pid=780941&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll780941' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_780941' skuid='780941'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,870089)' sku='870089'><div class='p-img'><a target='_blank'  href='http://item.jd.com/870089.html'><img width='220' height='220' alt='联想（Lenovo） Y485P 14.0英寸笔记本电脑（A10 5750 4G 1T 2G独显 摄像头 DVD刻录 Win8）' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/18/0D/rBEQWFF2OkAIAAAAAAGSos0ZhAMAAExawIMwVAAAZK6813.jpg' data-img="1"/></a><div class='pi4'></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/870089.html'>联想（Lenovo） Y485P 14.0英寸笔记本电脑（A10 5750 4G 1T 2G独显 摄像头 DVD刻录 Win8）<font style='color: #ff0000' class='adwords' name='870089'></font></a></div><div id='djd870089' class='p-price'><strong></strong><span id='p870089'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/870089-1-1.html'>已有55人评价</a></span><span class='reputation'>(87%好评)</span></div><div class='btns'><a onclick='log(1,7,870089)' href='http://gate.jd.com/InitCart.aspx?pid=870089&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll870089' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_870089' skuid='870089'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,912889)' sku='912889'><div class='p-img'><a target='_blank'  href='http://item.jd.com/912889.html'><img width='220' height='220' alt='联想（Lenovo） G480A 14.0英寸笔记本电脑（i3-3120M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）' data-lazyload='http://img14.360buyimg.com/n7/g8/M02/12/0D/rBEHZ1Dv0qwIAAAAAAFB1xH3-wMAADmUQCVRPQAAUHv294.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/912889.html'>联想（Lenovo） G480A 14.0英寸笔记本电脑（i3-3120M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）<font style='color: #ff0000' class='adwords' name='912889'></font></a></div><div id='djd912889' class='p-price'><strong></strong><span id='p912889'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/912889-1-1.html'>已有36人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,912889)' href='http://gate.jd.com/InitCart.aspx?pid=912889&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll912889' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_912889' skuid='912889'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,909757)' sku='909757'><div class='p-img'><a target='_blank'  href='http://item.jd.com/909757.html'><img width='220' height='220' alt='联想（Lenovo） U410-Touch 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 支持触控 Win8） ' data-lazyload='http://img12.360buyimg.com/n7/g13/M00/00/14/rBEhU1G0QssIAAAAAAEtjYxq8z0AAAH3AIabocAAS2l648.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/909757.html'>联想（Lenovo） U410-Touch 14英寸超极本（i5-3337U 4G 500G 24G固态硬盘 2G独显 蓝牙 支持触控 Win8） <font style='color: #ff0000' class='adwords' name='909757'></font></a></div><div id='djd909757' class='p-price'><strong></strong><span id='p909757'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/909757-1-1.html'>已有13人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,909757)' href='http://gate.jd.com/InitCart.aspx?pid=909757&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll909757' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_909757' skuid='909757'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,819679)' sku='819679'><div class='p-img'><a target='_blank'  href='http://item.jd.com/819679.html'><img width='220' height='220' alt='联想（Lenovo）扬天B590A 15.6英寸笔记本电脑 (i5-3230 2G 500G D刻 1G独显 Win8）黑色' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/10/10/rBEQWVFZBbIIAAAAAAEku0HF5QkAADOmAKSugoAASTT717.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/819679.html'>联想（Lenovo）扬天B590A 15.6英寸笔记本电脑 (i5-3230 2G 500G D刻 1G独显 Win8）黑色<font style='color: #ff0000' class='adwords' name='819679'></font></a></div><div id='djd819679' class='p-price'><strong></strong><span id='p819679'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/819679-1-1.html'>已有80人评价</a></span><span class='reputation'>(78%好评)</span></div><div class='btns'><a onclick='log(1,7,819679)' href='http://gate.jd.com/InitCart.aspx?pid=819679&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll819679' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_819679' skuid='819679'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,884963)' sku='884963'><div class='p-img'><a target='_blank'  href='http://item.jd.com/884963.html'><img width='220' height='220' alt='联想（lenovo）扬天B575eL-ETW 15.6英寸笔记本电脑 （E-2000 2G 500G D刻 摄像头)' data-lazyload='http://img13.360buyimg.com/n7/g12/M00/05/05/rBEQYFGQPY0IAAAAAAFzv9_mOCYAABArQGfZGcAAXPX810.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/884963.html'>联想（lenovo）扬天B575eL-ETW 15.6英寸笔记本电脑 （E-2000 2G 500G D刻 摄像头)<font style='color: #ff0000' class='adwords' name='884963'></font></a></div><div id='djd884963' class='p-price'><strong></strong><span id='p884963'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/884963-1-1.html'>已有55人评价</a></span><span class='reputation'>(87%好评)</span></div><div class='btns'><a onclick='log(1,7,884963)' href='http://gate.jd.com/InitCart.aspx?pid=884963&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll884963' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_884963' skuid='884963'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,912879)' sku='912879'><div class='p-img'><a target='_blank'  href='http://item.jd.com/912879.html'><img width='220' height='220' alt='联想（Lenovo） U310-Touch 13.3英寸超极本（i3-3227U 4G 500G 24G固态硬盘 摄像头 支持触控 Win8） 暮光灰' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/04/0A/rBEQWVElumcIAAAAAAFaaLvlg60AAA17wLSwd8AAVqA514.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/912879.html'>联想（Lenovo） U310-Touch 13.3英寸超极本（i3-3227U 4G 500G 24G固态硬盘 摄像头 支持触控 Win8） 暮光灰<font style='color: #ff0000' class='adwords' name='912879'></font></a></div><div id='djd912879' class='p-price'><strong></strong><span id='p912879'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/912879-1-1.html'>已有28人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='btns'><a onclick='log(1,7,912879)' href='http://gate.jd.com/InitCart.aspx?pid=912879&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll912879' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_912879' skuid='912879'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,856637)' sku='856637'><div class='p-img'><a target='_blank'  href='http://item.jd.com/856637.html'><img width='220' height='220' alt='联想扬天（Lenovo） M490A 14.0英寸笔记本电脑 （i5-3230M 4G 1T 1G独显 指纹 D刻 Win8）黑色' data-lazyload='http://img12.360buyimg.com/n7/g7/M03/0E/05/rBEHZVCgUJ4IAAAAAAIJqJv4HTIAACxCAOQTT0AAgnA162.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/856637.html'>联想扬天（Lenovo） M490A 14.0英寸笔记本电脑 （i5-3230M 4G 1T 1G独显 指纹 D刻 Win8）黑色<font style='color: #ff0000' class='adwords' name='856637'></font></a></div><div id='djd856637' class='p-price'><strong></strong><span id='p856637'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/856637-1-1.html'>已有41人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='btns'><a onclick='log(1,7,856637)' href='http://gate.jd.com/InitCart.aspx?pid=856637&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll856637' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_856637' skuid='856637'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,819793)' sku='819793'><div class='p-img'><a target='_blank'  href='http://item.jd.com/819793.html'><img width='220' height='220' alt='联想（Lenovo）扬天M490A 14.0英寸笔记本电脑 （i5-3230M 2G 500G 1G独显 指纹 D刻 Win8）灰色' data-lazyload='http://img13.360buyimg.com/n7/g10/M00/10/10/rBEQWVFZBcAIAAAAAAFBv5QwzoUAADOmAOqG0wAAUHX628.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/819793.html'>联想（Lenovo）扬天M490A 14.0英寸笔记本电脑 （i5-3230M 2G 500G 1G独显 指纹 D刻 Win8）灰色<font style='color: #ff0000' class='adwords' name='819793'></font></a></div><div id='djd819793' class='p-price'><strong></strong><span id='p819793'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/819793-1-1.html'>已有133人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='btns'><a onclick='log(1,7,819793)' href='http://gate.jd.com/InitCart.aspx?pid=819793&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll819793' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_819793' skuid='819793'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,853245)' sku='853245'><div class='p-img'><a target='_blank'  href='http://item.jd.com/853245.html'><img width='220' height='220' alt='联想（Lenovo） S300-ITH 13.3英寸笔记本电脑 （i3-3227U 2G 500G 1G独显 摄像头 Linux）萝莉粉' data-lazyload='http://img10.360buyimg.com/n7/g4/M02/06/1B/rBEGFVAh3ycIAAAAAAFeDCcX1ioAABVpwAxL4MAAV4k021.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/853245.html'>联想（Lenovo） S300-ITH 13.3英寸笔记本电脑 （i3-3227U 2G 500G 1G独显 摄像头 Linux）萝莉粉<font style='color: #ff0000' class='adwords' name='853245'></font></a></div><div id='djd853245' class='p-price'><strong></strong><span id='p853245'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/853245-1-1.html'>已有10人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='btns'><a onclick='log(1,7,853245)' href='http://gate.jd.com/InitCart.aspx?pid=853245&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll853245' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_853245' skuid='853245'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,819622)' sku='819622'><div class='p-img'><a target='_blank'  href='http://item.jd.com/819622.html'><img width='220' height='220' alt='联想（Lenovo）扬天V480sA 14.0英寸笔记本电脑 （i5-3210 4G 1T 2G独显 摄像头 Win7）' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/09/10/rBEQWVE9QtQIAAAAAAGey-SlnSUAAB25AME4WYAAZ7j338.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/819622.html'>联想（Lenovo）扬天V480sA 14.0英寸笔记本电脑 （i5-3210 4G 1T 2G独显 摄像头 Win7）<font style='color: #ff0000' class='adwords' name='819622'></font></a></div><div id='djd819622' class='p-price'><strong></strong><span id='p819622'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/819622-1-1.html'>已有87人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='btns'><a onclick='log(1,7,819622)' href='http://gate.jd.com/InitCart.aspx?pid=819622&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll819622' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_819622' skuid='819622'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,870090)' sku='870090'><div class='p-img'><a target='_blank'  href='http://item.jd.com/870090.html'><img width='220' height='220' alt='联想（Lenovo） Y485P 14.0英寸笔记本电脑（A8 5550 4G 1T 2G独显 摄像头 DVD刻录 Win8）' data-lazyload='http://img10.360buyimg.com/n7/g10/M00/18/0D/rBEQWFF2OkAIAAAAAAGSos0ZhAMAAExawIMwVAAAZK6813.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/870090.html'>联想（Lenovo） Y485P 14.0英寸笔记本电脑（A8 5550 4G 1T 2G独显 摄像头 DVD刻录 Win8）<font style='color: #ff0000' class='adwords' name='870090'></font></a></div><div id='djd870090' class='p-price'><strong></strong><span id='p870090'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/870090-1-1.html'>已有72人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='btns'><a onclick='log(1,7,870090)' href='http://gate.jd.com/InitCart.aspx?pid=870090&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll870090' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_870090' skuid='870090'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,896727)' sku='896727'><div class='p-img'><a target='_blank'  href='http://item.jd.com/896727.html'><img width='220' height='220' alt='联想扬天（Lenovo） V480s 14英寸笔记本电脑（i3-3120M 4G 500G 2G独显 GT635M 蓝牙 指纹 Win8 红色)' data-lazyload='http://img12.360buyimg.com/n7/g12/M00/09/0B/rBEQYFGdtvQIAAAAAAFgVRxhuAUAAB07QDVTvIAAWBt476.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/896727.html'>联想扬天（Lenovo） V480s 14英寸笔记本电脑（i3-3120M 4G 500G 2G独显 GT635M 蓝牙 指纹 Win8 红色)<font style='color: #ff0000' class='adwords' name='896727'></font></a></div><div id='djd896727' class='p-price'><strong></strong><span id='p896727'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/896727-1-1.html'>已有12人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,896727)' href='http://gate.jd.com/InitCart.aspx?pid=896727&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll896727' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_896727' skuid='896727'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,884970)' sku='884970'><div class='p-img'><a target='_blank'  href='http://item.jd.com/884970.html'><img width='220' height='220' alt='联想（Lenovo） 扬天V580A-ISE 15.6英寸笔记本电脑 （i7-3632QM 8G 1T Geforce GT 645M 2G独显)' data-lazyload='http://img10.360buyimg.com/n7/g12/M00/05/05/rBEQYVGQPeMIAAAAAAGeejzzPqQAABArgNxm4sAAZ6S525.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/884970.html'>联想（Lenovo） 扬天V580A-ISE 15.6英寸笔记本电脑 （i7-3632QM 8G 1T Geforce GT 645M 2G独显)<font style='color: #ff0000' class='adwords' name='884970'></font></a></div><div id='djd884970' class='p-price'><strong></strong><span id='p884970'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/884970-1-1.html'>已有24人评价</a></span><span class='reputation'>(96%好评)</span></div><div class='btns'><a onclick='log(1,7,884970)' href='http://gate.jd.com/InitCart.aspx?pid=884970&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll884970' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_884970' skuid='884970'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,917238)' sku='917238'><div class='p-img'><a target='_blank'  href='http://item.jd.com/917238.html'><img width='220' height='220' alt='联想（Lenovo） S400-IFI 14.0英寸笔记本电脑（i5-3337U 4G 500G 1G独显 摄像头 Linpus Lite）星光银' data-lazyload='http://img13.360buyimg.com/n7/g7/M03/00/06/rBEHZlAt8eYIAAAAAADxpbrA5SAAAACeANp4AwAAPG9317.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/917238.html'>联想（Lenovo） S400-IFI 14.0英寸笔记本电脑（i5-3337U 4G 500G 1G独显 摄像头 Linpus Lite）星光银<font style='color: #ff0000' class='adwords' name='917238'></font></a></div><div id='djd917238' class='p-price'><strong></strong><span id='p917238'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/917238-1-1.html'>已有7人评价</a></span><span class='reputation'>(100%好评)</span></div><div class='btns'><a onclick='log(1,7,917238)' href='http://gate.jd.com/InitCart.aspx?pid=917238&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll917238' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_917238' skuid='917238'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,884966)' sku='884966'><div class='p-img'><a target='_blank'  href='http://item.jd.com/884966.html'><img width='220' height='220' alt='联想（lenovo） 扬天V580A-IFI 15.6英寸笔记本电脑 （i5-3230M 4G 1T Geforce GT 645M  2G独显)' data-lazyload='http://img11.360buyimg.com/n7/g12/M00/05/05/rBEQYVGQPeMIAAAAAAGeejzzPqQAABArgNxm4sAAZ6S525.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/884966.html'>联想（lenovo） 扬天V580A-IFI 15.6英寸笔记本电脑 （i5-3230M 4G 1T Geforce GT 645M  2G独显)<font style='color: #ff0000' class='adwords' name='884966'></font></a></div><div id='djd884966' class='p-price'><strong></strong><span id='p884966'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/884966-1-1.html'>已有23人评价</a></span><span class='reputation'>(96%好评)</span></div><div class='btns'><a onclick='log(1,7,884966)' href='http://gate.jd.com/InitCart.aspx?pid=884966&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll884966' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_884966' skuid='884966'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,893900)' sku='893900'><div class='p-img'><a target='_blank'  href='http://item.jd.com/893900.html'><img width='220' height='220' alt='联想扬天（Lenovo） V480s 14英寸笔记本电脑（i3-3120M 4G 500G 2G独显 GT635M 蓝牙 指纹 Win8 银色)' data-lazyload='http://img10.360buyimg.com/n7/g12/M00/03/06/rBEQYVGJ7SkIAAAAAAF_-b0tuooAAAn3QEzqcsAAYAR712.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/893900.html'>联想扬天（Lenovo） V480s 14英寸笔记本电脑（i3-3120M 4G 500G 2G独显 GT635M 蓝牙 指纹 Win8 银色)<font style='color: #ff0000' class='adwords' name='893900'></font></a></div><div id='djd893900' class='p-price'><strong></strong><span id='p893900'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/893900-1-1.html'>已有14人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='btns'><a onclick='log(1,7,893900)' href='http://gate.jd.com/InitCart.aspx?pid=893900&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll893900' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_893900' skuid='893900'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,819657)' sku='819657'><div class='p-img'><a target='_blank'  href='http://item.jd.com/819657.html'><img width='220' height='220' alt='联想扬天（Lenovo）M495A 14.0英寸笔记本电脑（A8-4500M 4G 1T 1G独显 指纹 D刻 Win8）黑色' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/11/0C/rBEQWFFb6WcIAAAAAAFHrfQ7vU8AADZUQLIvZ0AAUfF339.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/819657.html'>联想扬天（Lenovo）M495A 14.0英寸笔记本电脑（A8-4500M 4G 1T 1G独显 指纹 D刻 Win8）黑色<font style='color: #ff0000' class='adwords' name='819657'></font></a></div><div id='djd819657' class='p-price'><strong></strong><span id='p819657'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/819657-1-1.html'>已有109人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='btns'><a onclick='log(1,7,819657)' href='http://gate.jd.com/InitCart.aspx?pid=819657&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll819657' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_819657' skuid='819657'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,852973)' sku='852973'><div class='p-img'><a target='_blank'  href='http://item.jd.com/852973.html'><img width='220' height='220' alt='联想（Lenovo） G580AM 15.6英寸笔记本电脑（i3-3120M 4G 500G 1G独显 D刻 摄像头 Linpus） 棕黑色' data-lazyload='http://img13.360buyimg.com/n7/g7/M03/05/0E/rBEHZVBITogIAAAAAAIiMlvOB7IAABEPwPPM90AAiJK909.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/852973.html'>联想（Lenovo） G580AM 15.6英寸笔记本电脑（i3-3120M 4G 500G 1G独显 D刻 摄像头 Linpus） 棕黑色<font style='color: #ff0000' class='adwords' name='852973'></font></a></div><div id='djd852973' class='p-price'><strong></strong><span id='p852973'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/852973-1-1.html'>已有85人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='btns'><a onclick='log(1,7,852973)' href='http://gate.jd.com/InitCart.aspx?pid=852973&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll852973' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_852973' skuid='852973'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,832053)' sku='832053'><div class='p-img'><a target='_blank'  href='http://item.jd.com/832053.html'><img width='220' height='220' alt='联想（Lenovo）扬天V480A 14.0英寸笔记本电脑 （i5-3230M 4G 1T 2G独显 D刻 指纹 Win8）金属沉稳灰磨砂' data-lazyload='http://img13.360buyimg.com/n7/g10/M00/10/10/rBEQWFFZBb0IAAAAAAFsWO8QE74AADOmQFuSbYAAWxw083.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/832053.html'>联想（Lenovo）扬天V480A 14.0英寸笔记本电脑 （i5-3230M 4G 1T 2G独显 D刻 指纹 Win8）金属沉稳灰磨砂<font style='color: #ff0000' class='adwords' name='832053'></font></a></div><div id='djd832053' class='p-price'><strong></strong><span id='p832053'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/832053-1-1.html'>已有70人评价</a></span><span class='reputation'>(83%好评)</span></div><div class='btns'><a onclick='log(1,7,832053)' href='http://gate.jd.com/InitCart.aspx?pid=832053&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll832053' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_832053' skuid='832053'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li onclick='log(7,3,885202)' sku='885202'><div class='p-img'><a target='_blank'  href='http://item.jd.com/885202.html'><img width='220' height='220' alt='联想（Lenovo） G580AM 15.6英寸笔记本电脑（i5-3230M 4G 500G 1G独显 D刻 摄像头 Linpus Lite） 棕黑色' data-lazyload='http://img12.360buyimg.com/n7/g7/M03/05/0E/rBEHZVBITogIAAAAAAIiMlvOB7IAABEPwPPM90AAiJK909.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/885202.html'>联想（Lenovo） G580AM 15.6英寸笔记本电脑（i5-3230M 4G 500G 1G独显 D刻 摄像头 Linpus Lite） 棕黑色<font style='color: #ff0000' class='adwords' name='885202'></font></a></div><div id='djd885202' class='p-price'><strong></strong><span id='p885202'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/885202-1-1.html'>已有22人评价</a></span><span class='reputation'>(95%好评)</span></div><div class='btns'><a onclick='log(1,7,885202)' href='http://gate.jd.com/InitCart.aspx?pid=885202&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll885202' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_885202' skuid='885202'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+</ul>
+</div>
+<script type="text/javascript">var jdwsment = {"key":"FB0DB3CDEE7252B8E7DC1F6BDD700F79A5D196BE","skuids":"853231,882186,811030,853236,891621,807057,889647,896978,912888,858439,852970,852968,852969,884961,913093,780941,870089,912889,909757,819679,884963,912879,856637,819793,853245,819622,870090,896727,884970,917238,884966,893900,819657,852973,832053,885202"};</script>
+<script>(function() {var plist = $('#plist'),ul = plist.children('.list-h'),li = ul.children('li'),skuids = [], res = [], flag = 0;if ( typeof jdwsment !== 'undefined') {skuids = jdwsment.skuids.split(',');} else {for (var i = 0; i < li.length; i++) {skuids.push( li.eq(i).attr('sku') );}}function getPrice(skuids) {$.ajax({url: 'http://p.3.cn/prices/mgets?skuIds=J_' + skuids.join(',J_') + '&type=1',dataType: 'jsonp',success: function(r) {if ( !r && !r.length ) { return false; }for ( var i = 0; i < r.length; i++ ) {var sku = r[i].id.replace('J_', '');var price = r[i].p;if ( price > 0 ) {ul.children('li[sku="'+ sku +'"]').find('.p-price strong').html( '￥' + price + '' );} else {ul.children('li[sku="'+ sku +'"]').find('.p-price strong').html( '暂无报价' );}}}});}getPrice(skuids);})();</script>
+<div class="m clearfix">
+<div class="pagin fr"><span class='prev-disabled'>上一页<b></b></span>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-1-1.html' class='current'>1</a>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-2-1.html'>2</a>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-3-1.html'>3</a>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-4-1.html'>4</a>
+<a href='670-671-672-1311-0-0-0-0-0-0-1-1-2-1.html' class='next' >下一页<b></b></a>
+</div>
+</div>
+<div reco_id="2" class="shop-choice hide" id="shop-choice"></div>
+
+    </div>
+    <!--right-extra end-->
+    <script type="text/javascript"> function lazyload(option) { var settings = { defObj: null, defHeight: 0 }; settings = $.extend(settings, option || {}); var defHeight = settings.defHeight, defObj = (typeof settings.defObj == "object") ? settings.defObj.find("img") : $(settings.defObj).find("img"); var pageTop = function() { var d = document, y = (navigator.userAgent.toLowerCase().match(/iPad/i) == "ipad") ? window.pageYOffset : Math.max(d.documentElement.scrollTop, d.body.scrollTop); return d.documentElement.clientHeight + y - settings.defHeight }; var imgLoad = function() { defObj.each(function() { if ($(this).offset().top <= pageTop()) { var src2 = $(this).attr("src2"); if (src2) { $(this).attr("src", src2).removeAttr("src2") } } }) }; imgLoad(); $(window).bind("scroll", function() { imgLoad() }) } lazyload({ defObj: "#plist" })</script>
+    <div class="left">
+        <div class="m" id="sortlist" clstag="thirdtype|keycount|thirdtype|sortlist">
+            
+<div class="mt"><h2>电脑、办公</h2></div><DIV class=mc><DIV class="item current"><H3><B></B>电脑整机</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-671-672.html'>笔记本</a></LI>
+<LI><a href='http://list.jd.com/670-671-6864.html'>超极本</a></LI>
+<LI><a href='http://list.jd.com/670-671-1105.html'>上网本</a></LI>
+<LI><a href='http://list.jd.com/670-671-2694.html'>平板电脑</a></LI>
+<LI><a href='http://list.jd.com/670-671-5146.html'>平板电脑配件</a></LI>
+<LI><a href='http://list.jd.com/670-671-673.html'>台式机</a></LI>
+<LI><a href='http://list.jd.com/670-671-674.html'>服务器</a></LI>
+<LI><a href='http://list.jd.com/670-671-675.html'>笔记本配件</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>电脑配件</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-677-678.html'>CPU</a></LI>
+<LI><a href='http://list.jd.com/670-677-681.html'>主板</a></LI>
+<LI><a href='http://list.jd.com/670-677-679.html'>显卡</a></LI>
+<LI><a href='http://list.jd.com/670-677-683.html'>硬盘</a></LI>
+<LI><a href='http://list.jd.com/670-677-680.html'>内存</a></LI>
+<LI><a href='http://list.jd.com/670-677-687.html'>机箱</a></LI>
+<LI><a href='http://list.jd.com/670-677-691.html'>电源</a></LI>
+<LI><a href='http://list.jd.com/670-677-688.html'>显示器</a></LI>
+<LI><a href='http://list.jd.com/670-677-684.html'>刻录机/光驱</a></LI>
+<LI><a href='http://list.jd.com/670-677-682.html'>散热器</a></LI>
+<LI><a href='http://list.jd.com/670-677-5008.html'>声卡/扩展卡</a></LI>
+<LI><a href='http://list.jd.com/670-677-5009.html'>装机配件</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>外设产品</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-686-690.html'>鼠标</a></LI>
+<LI><a href='http://list.jd.com/670-686-689.html'>键盘</a></LI>
+<LI><a href='http://list.jd.com/670-686-693.html'>移动硬盘</a></LI>
+<LI><a href='http://list.jd.com/670-686-694.html'>U盘</a></LI>
+<LI><a href='http://list.jd.com/670-686-692.html'>摄像头</a></LI>
+<LI><a href='http://list.jd.com/670-686-695.html'>外置盒</a></LI>
+<LI><a href='http://list.jd.com/670-686-696.html'>游戏设备</a></LI>
+<LI><a href='http://list.jd.com/670-686-697.html'>电视盒</a></LI>
+<LI><a href='http://list.jd.com/670-686-698.html'>手写板</a></LI>
+<LI><a href='http://list.jd.com/670-686-826.html'>鼠标垫</a></LI>
+<LI><a href='http://list.jd.com/670-686-1047.html'>插座</a></LI>
+<LI><a href='http://list.jd.com/670-686-1048.html'>UPS电源</a></LI>
+<LI><a href='http://list.jd.com/670-686-1049.html'>线缆</a></LI>
+<LI><a href='http://list.jd.com/670-686-1050.html'>电脑工具</a></LI>
+<LI><a href='http://list.jd.com/670-686-1051.html'>电脑清洁</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>网络产品</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-699-700.html'>路由器</a></LI>
+<LI><a href='http://list.jd.com/670-699-701.html'>网卡</a></LI>
+<LI><a href='http://list.jd.com/670-699-702.html'>交换机</a></LI>
+<LI><a href='http://list.jd.com/670-699-983.html'>网络存储</a></LI>
+<LI><a href='http://list.jd.com/670-699-1098.html'>3G上网</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>办公打印</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-716-717.html'>打印机</a></LI>
+<LI><a href='http://list.jd.com/670-716-720.html'>一体机</a></LI>
+<LI><a href='http://list.jd.com/670-716-722.html'>投影机</a></LI>
+<LI><a href='http://list.jd.com/670-716-5010.html'>投影配件</a></LI>
+<LI><a href='http://list.jd.com/670-716-718.html'>传真机</a></LI>
+<LI><a href='http://list.jd.com/670-716-719.html'>复合机</a></LI>
+<LI><a href='http://list.jd.com/670-716-723.html'>碎纸机</a></LI>
+<LI><a href='http://list.jd.com/670-716-721.html'>扫描仪</a></LI>
+<LI><a href='http://list.jd.com/670-716-731.html'>墨盒</a></LI>
+<LI><a href='http://list.jd.com/670-716-730.html'>硒鼓</a></LI>
+<LI><a href='http://list.jd.com/670-716-732.html'>墨粉</a></LI>
+<LI><a href='http://list.jd.com/670-716-733.html'>色带</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>办公文仪</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-729-4837.html'>办公文具</a></LI>
+<LI><a href='http://list.jd.com/670-729-4840.html'>文件管理</a></LI>
+<LI><a href='http://list.jd.com/670-729-2603.html'>笔类</a></LI>
+<LI><a href='http://list.jd.com/670-729-736.html'>纸类</a></LI>
+<LI><a href='http://list.jd.com/670-729-7371.html'>本册/便签</a></LI>
+<LI><a href='http://list.jd.com/670-729-1449.html'>学生文具</a></LI>
+<LI><a href='http://list.jd.com/670-729-7372.html'>财务用品</a></LI>
+<LI><a href='http://list.jd.com/670-729-728.html'>计算器</a></LI>
+<LI><a href='http://list.jd.com/670-729-1229.html'>激光笔</a></LI>
+<LI><a href='http://list.jd.com/670-729-4839.html'>白板/封装</a></LI>
+<LI><a href='http://list.jd.com/670-729-724.html'>考勤机</a></LI>
+<LI><a href='http://list.jd.com/670-729-4838.html'>刻录碟片/附件</a></LI>
+<LI><a href='http://list.jd.com/670-729-725.html'>点钞机</a></LI>
+<LI><a href='http://list.jd.com/670-729-7373.html'>支付设备/POS机</a></LI>
+<LI><a href='http://list.jd.com/670-729-7374.html'>安防监控</a></LI>
+<LI><a href='http://list.jd.com/670-729-7375.html'>呼叫/会议设备</a></LI>
+<LI><a href='http://list.jd.com/670-729-2601.html'>保险柜</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>服务产品</H3>
+<UL>
+<LI><a href='http://list.jd.com/670-703-10011.html'>上门服务</a></LI>
+<LI><a href='http://list.jd.com/670-703-10970.html'>远程服务</a></LI>
+<LI><a href='http://list.jd.com/670-703-5011.html'>电脑软件</a></LI>
+<LI><a href='http://list.jd.com/670-703-1009.html'>京东服务</a></LI>
+</UL></DIV></DIV>
+
+        </div>
+        <!--sortlist end-->
+        <script type="text/javascript">
+            $("#sortlist h3").bind("click",function(){
+                var element=$(this).parent();
+                if (element.hasClass("current")){
+                    element.removeClass("current");
+                }else{
+                    element.addClass("current");
+                }
+            })
+        </script>
+
+        <div class="m limitbuy hide" id="limitbuy535" clstag="thirdtype|keycount|thirdtype|limitbuy536">
+<div class="mt">
+<h2>IT数码限时抢购</h2>
+</div>
+<div class="mc">
+<div class="clock" id="clock535">正在加载…</div>
+<div id="limit535"></div>
+</div>
+</div><!--limitbuy end -->
+
+
+        <div id="ad_left" reco_id="6" class="m m0 hide"></div><!--搜索广告推荐-->
+        <div id="finalbuy" class="hide m m0"></div><!--关注手机最终购买-->
+        <div id="weekRank" class="m rank" clstag="thirdtype|keycount|thirdtype|mrank">
+            <div class="mt">
+                <h2>一周销量排行榜</h2>
+            </div>
+            <div class="mc">
+                <ul class="tabcon">
+                    
+<li class="fore fore1"><span>1</span><div class="p-img"><a target="_blank"  href="http://item.jd.com/912889.html"><img alt="联想（Lenovo） G480A 14.0英寸笔记本电脑（i3-3120M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）" src="http://img14.360buyimg.com/n5/g8/M02/12/0D/rBEHZ1Dv0qwIAAAAAAFB1xH3-wMAADmUQCVRPQAAUHv294.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/912889.html">联想（Lenovo） G480A 14.0英寸笔记本电脑（i3-3120M 4G 500G 1G独显 摄像头 DVD刻录 Linpus Lite）</a></div><div class="p-price"  sku='912889'><strong></strong></div></li><li  class="fore2"><span>2</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/842273.html">华硕（ASUS） R400EI323VD 14英寸笔记本 （i5-3230M 4G 7200转500G 2G独显 D刻 Win7 冷金色）</a></div></li><li  class="fore3"><span>3</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/812683.html">ThinkPad E430(3254-C18)14英寸笔记本电脑（i5-2520M 2G 500G G610M 1G独显 蓝牙 Win8 一年质保）</a></div></li><li><span>4</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/880751.html">东芝（TOSHIBA） L800-C55W 14英寸笔记本电脑 （i5-3230M 4G 500G HD7670 1G独显 2*USB3.0 WIN7 ）白色</a></div></li><li><span>5</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/820948.html">惠普（HP） CQ45-m01TU 14.0英寸笔记本电脑 （i5-3230M 4G 500G 高清核显HD4000 DOS 黑色）</a></div></li><li><span>6</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/807971.html">联想（Lenovo）扬天B590A 15.6英寸笔记本电脑 (i3-3120 2G 500G HDMI D刻 1G独显 Win8）黑色</a></div></li><li><span>7</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/853236.html">联想（Lenovo） Y400N 14.0英寸笔记本电脑（i5-3230M 4G 1T 2G独显 摄像头 DVD刻 Win8）</a></div></li><li><span>8</span><div class="p-name"><a target="_blank"  href="http://item.jd.com/768573.html">索尼(SONY) SVE1512S8C 15.5英寸笔记本电脑 （i5-3210M 2G 500G HD7650M 2G独显 D刻 蓝牙 USB3.0 WIN8 粉）</a></div></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--rank end-->
+        <div class="m" id="da211x261-2"></div><div id="alsobuy" class="hide m m0"></div><!--浏览XXX还购买了--><div class="m" clstag="thirdtype|keycount|thirdtype|m" id="da211x261-1"></div>
+    </div>
+    <!--left end-->
+    <span class="clr"></span>
+    <div id="Collect_Tip" class="Tip360 w260"></div>
+</div>
+
+<script>
+    (function() {
+        var skuids = [],
+                hotSalePriceQ = $("#hotsale .p-price"),
+                weekRankPriceQ = $("#weekRank .p-price"),
+                skuId;
+
+        for (var i = 0, l=hotSalePriceQ.length; i < l; i++) {
+            skuId = hotSalePriceQ.eq(i).attr('sku');
+            if ( skuId ) {
+                skuids.push( skuId );
+            }
+        }
+        for (var i = 0, l=weekRankPriceQ.length; i < l; i++) {
+            skuId = weekRankPriceQ.eq(i).attr('sku');
+            if ( skuId ) {
+                skuids.push( skuId );
+            }
+        }
+
+        function getPrice(skuids) {
+            if ( !skuids || skuids.length == 0 ) {
+                return;
+            }
+
+            $.ajax({
+                url: 'http://p.3.cn/prices/mgets?skuIds=J_' + skuids.join(',J_') + '&type=1',
+                dataType: 'jsonp',
+                success: function(r) {
+                    if ( !r && !r.length ) { return false; }
+                    for ( var i = 0; i < r.length; i++ ) {
+                        var sku = r[i].id.replace('J_', '');
+                        var price = r[i].p;
+                        if ( price > 0 ) {
+                            $(".p-price[sku='"+sku+"']").children("strong").html( '\uffe5' + price);
+                        } else {
+                            $(".p-price[sku='"+sku+"']").children("strong").html( '暂无报价' );
+                        }
+                    }
+                }
+            });
+        }
+        getPrice(skuids);
+    })();</script>
+
+<div class="w">
+    <div id="product-track">
+        <div class="right">
+            <div id="maybe-like" class="m m2" data-widget="tabs">
+                <div class="mt">
+                    <h2>根据浏览猜你喜欢</h2>
+                    <div class="extra">
+                    </div>
+                </div>
+                <div class="mc">
+                    <div class="iloading">正在加载中，请稍候...</div>
+                </div>
+            </div>
+            <!--maybe-like-->
+        </div><!-- right -->
+        <div class="left">
+            <div id="recent-view-track" class="m m2">
+                <div class="mt">
+                    <h2>最近浏览</h2>
+                </div>
+                <div class="mc">
+                    <div class="iloading">正在加载中，请稍候...</div>
+                </div>
+            </div>
+            <!--recent-view-track end-->
+        </div><!-- left -->
+        <span class="clr"></span>
+    </div>
+</div>
+<div class="w">
+    <div id="service-2013">
+        <dl class="fore1">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-56.html" target="_blank" rel="nofollow">购物流程</a></div>
+                <div><a href="http://help.jd.com/help/question-57.html" target="_blank" rel="nofollow">会员介绍</a></div>
+                <div><a href="http://help.jd.com/help/question-181.html" target="_blank" rel="nofollow">团购/机票</a></div>
+                <div><a href="http://help.jd.com/help/question-61.html" target="_blank" rel="nofollow">常见问题</a></div>
+                <div><a href="http://help.jd.com/help/question-63.html" target="_blank" rel="nofollow">大家电</a></div>
+                <div><a href="http://help.jd.com/index.html" target="_blank" rel="nofollow">联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore2">
+            <dt><b></b><strong>配送方式</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-64.html" target="_blank" rel="nofollow">上门自提</a></div>
+                <div><a href="http://help.jd.com/help/question-360.html" target="_blank" rel="nofollow">211限时达</a></div>
+                <div><a href="http://help.jd.com/help/distribution-768.html" target="_blank" rel="nofollow">快递运输</a></div>
+                <div><a href="http://market.jd.com/giftcard/index.html#one5" target="_blank" rel="nofollow">如何送礼</a></div>
+                <div><a href="http://en.360buy.com/" target="_blank">Global Shipping</a></div>
+            </dd>
+        </dl>
+        <dl class="fore3">
+            <dt><b></b><strong>支付方式</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-67.html" target="_blank" rel="nofollow">货到付款</a></div>
+                <div><a href="http://help.jd.com/help/question-68.html" target="_blank" rel="nofollow">在线支付</a></div>
+                <div><a href="http://help.jd.com/help/question-71.html" target="_blank" rel="nofollow">分期付款</a></div>
+                <div><a href="http://help.jd.com/help/question-69.html" target="_blank" rel="nofollow">邮局汇款</a></div>
+                <div><a href="http://help.jd.com/help/question-70.html" target="_blank" rel="nofollow">公司转账</a></div>
+            </dd>
+        </dl>
+        <dl class="fore4">
+            <dt><b></b><strong>售后服务</strong></dt>
+            <dd>
+                <div><a href="http://myjd.jd.com/afs/help/afshelp.action" target="_blank" rel="nofollow">售后政策</a></div>
+                <div><a href="http://help.jd.com/help/question-99.html" target="_blank" rel="nofollow">价格保护</a></div>
+                <div><a href="http://help.jd.com/help/question-100.html" target="_blank" rel="nofollow">退款说明</a></div>
+                <div><a href="http://myjd.jd.com/repair/repairs.action" target="_blank" rel="nofollow">返修/退换货</a></div>
+                <div><a href="http://order.jd.com/normal/list.action" target="_blank" rel="nofollow">取消订单</a></div>
+            </dd>
+        </dl>
+        <dl class="fore5">
+            <dt><b></b><strong>特色服务</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-79.html" target="_blank">夺宝岛</a></div>
+                <div><a href="http://help.jd.com/help/question-86.html" target="_blank">DIY装机</a></div>
+                <div><a href="http://fuwu.jd.com/" target="_blank" rel="nofollow">延保服务</a></div>
+                <div><a href="http://market.jd.com/giftcard/index.html" target="_blank" rel="nofollow">京东礼品卡</a></div>
+                <div><a href="http://help.jd.com/help/question-91.html" target="_blank" rel="nofollow">节能补贴</a></div>
+            </dd>
+        </dl>
+        <span class="clr"></span>
+    </div>
+</div><!-- service end -->
+<div class="w">
+    <div id="footer-2013">
+        <div class="links"><a href="http://www.jd.com/intro/about.aspx" target="_blank" rel="nofollow">关于我们</a>|<a href="http://www.jd.com/contact/" target="_blank" rel="nofollow">联系我们</a>|<a href="http://zhaopin.jd.com/" target="_blank" rel="nofollow">人才招聘</a>|<a href="http://www.jd.com/contact/joinin.aspx" target="_blank" rel="nofollow">商家入驻</a>|<a href="http://www.jd.com/intro/service.aspx" target="_blank" rel="nofollow">广告服务</a>|<a href="http://app.jd.com/" target="_blank" rel="nofollow">手机京东</a>|<a href="http://club.jd.com/links.aspx" target="_blank">友情链接</a>|<a href="http://cps.jd.com/" target="_blank">销售联盟</a>|<a target="_blank" href="http://club.jd.com/">京东社区</a>|<a target="_blank" href="http://gongyi.jd.com">京东公益</a></div>
+        <div class="copyright">北京市公安局朝阳分局备案编号110105014669&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证070359号&nbsp;&nbsp;|&nbsp;&nbsp;互联网药品信息服务资格证编号(京)-非经营性-2011-0034<br><a target="_blank" href="http://misc.360buyimg.com/skin/df/i/com/f_music.jpg" rel="nofollow">音像制品经营许可证苏宿批005号</a>&nbsp;&nbsp;|&nbsp;&nbsp;出版物经营许可证编号新出发(苏)批字第N-012号&nbsp;&nbsp;|&nbsp;&nbsp;互联网出版许可证编号新出网证(京)字150号<br><a target="_blank" href="http://misc.360buyimg.com/wz/wlwhjyxkz.jpg">网络文化经营许可证京网文[2011]0168-061号</a>&nbsp;&nbsp;Copyright&nbsp;&copy;&nbsp;2004-2013&nbsp;&nbsp;京东JD.com&nbsp;版权所有<br />京东旗下网站：<a href="http://www.360top.com/" target="_blank">360TOP</a>&nbsp;&nbsp;<a href="http://www.minitiao.com/" target="_blank">迷你挑</a>&nbsp;&nbsp;<a target="_blank" href="http://en.360buy.com/">English Site</a></div>
+        <div class="authentication"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026" target="_blank" rel="nofollow"><img data-lazyload="http://img10.360buyimg.com/da/20110329/108_40_zZOKnl.gif" width="108" height="40" alt="经营性网站备案中心"></a><script type="text/JavaScript">function CNNIC_change(eleId){var str= document.getElementById(eleId).href;var str1 =str.substring(0,(str.length-6));str1+=CNNIC_RndNum(6); document.getElementById(eleId).href=str1;}function CNNIC_RndNum(k){var rnd=""; for (var i=0;i < k;i++) rnd+=Math.floor(Math.random()*10); return rnd;}</script> <a href="https://ss.cnnic.cn/verifyseal.dll?sn=2008070300100000031&ct=df&pa=294005" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" border="true" data-lazyload="http://img11.360buyimg.com/da/g8/M03/0C/0E/rBEHaFCFC5QIAAAAAAASVQX9RAYAACb2wHUV1kAABJt760.gif" width="108" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')" /></a><a href="http://about.58.com/fqz/index.html" target="_blank" rel="nofollow"><img data-lazyload="http://img12.360buyimg.com/da/g5/M02/0D/17/rBEIDE_nzcIIAAAAAAB30mYXo5QAACrhACj22IAAHfq378.png" width="108" height="40" alt="朝阳网络警察"></a><a href="https://search.szfw.org/cert/l/CX20120111001803001836" target="_blank" rel="nofollow"><img data-lazyload="http://img13.360buyimg.com/da/20120221/112_40_WvArIl.png" width="112" height="40"></a></div>
+    </div>
+</div><!-- footer end -->
+
+<script type="text/javascript">(function(){var hotwords="<strong>热门搜索：</strong><a href='http://search.360buy.com/Search?keyword=%E6%B2%99%E6%BC%A0%E9%A3%8E%E6%9A%B4&enc=utf-8' target='_blank' style='color: #CC0000'>沙漠风暴</a><a href='http://search.360buy.com/Search?keyword=尼康S5100' target='_blank'>尼康S5100</a><a href='http://search.360buy.com/Search?keyword=三星I8250'target='_blank'>三星I8250</a><a href=http://search.360buy.com/Search?keyword=%E5%8F%B0%E7%94%B5%20P85&enc=utf-8&area=1' target='_blank'>台电 P85</a><a href='http://search.360buy.com/Search?keyword=诺基亚 808' target='_blank'>诺基亚 808</a><a href='http://search.360buy.com/Search?keyword=RCA播放器' target='_blank'>RCA播放器</a><a href='http://search.360buy.com/Search?keyword=中兴 U970' target='_blank'>中兴 U970</a><a href='http://search.360buy.com/Search?keyword=三星I569' target='_blank'>三星I569</a><a href='http://search.360buy.com/Search?keyword=i5508' target='_blank'>i5508</a><a href='http://search.360buy.com/Search?keyword=C6' target='_blank'>C6</a>";
+    var keywords="One xc";
+    $("#hotwords").html(hotwords);
+    $("#key").val(keywords).bind("focus",function(){
+        if (this.value==keywords){this.value="";this.style.color="#333"}
+    }).bind("blur",function(){
+                if (this.value==""){this.value=keywords;this.style.color="#999"}
+            });
+})();
+</script>
+<script type="text/javascript" src="http://misc.360buyimg.com/lib/js/2012/lib-v1.js?t=20120809"></script>
+<script type="text/javascript">$("#store-selector").Jdropdown();</script>
+<script type="text/javascript">$("#filter .type").hoverForIE6();</script>
+<script type="text/javascript">$.jdCalcul([535]);</script>
+<script type="text/javascript">pageConfig.FN_InitContrast();</script>
+<script type="text/javascript" src="http://misc.360buyimg.com/201007/js/p.plist20121206.js"></script>
+<script type="text/javascript" src="http://simigoods.360buy.com/js/BiForWeb.js"></script>
+<script type="text/javascript" src="http://misc.360buyimg.com/product/js/2012/footprint.js"></script>
+<script type="text/javascript">
+    (function(){var ref=document.referrer; if(ref && ref.indexOf("jd.com")==-1 && ref.indexOf("360buy.com")==-1 ){ListRecP(672);}})();
+    function feed_publish_collect(type,wid){jQuery.getJSON("http://i.360buy.com/feed/send.action?type="+type+"&commodityId="+wid+"&jsoncallback=?",function(json){})}
+    if($("#hotsale").length>0){log('thirdtype', 'showhotsale_M');}
+</script>
+<script type="text/javascript">
+    var sidePanle=new pageConfig.FN_InitSidebar();
+    sidePanle.addItem("<a class='research' target='_blank' href='http://market.jd.com/jdvote/vote2.aspx?voteId=123'><b></b>调查问卷</a>")
+    sidePanle.setTop();
+    sidePanle.scroll();
+</script>
+<script type="text/javascript" src="http://simigoods.360buy.com/js/ThridRec.js?t=20121129"></script>
+<script type="text/javascript">$.getJSONP("http://simigoods.360buy.com/ThridRec/RankHandler.ashx?BrandId=1311&type=672&callback=brandSaleTopCallback", brandSaleTopCallback);
+function brandSaleTopCallback(data){if ( data ) { var list = {tablist:data}; $("#weekRank .mc").html(tabListTpl.process(list));}}
+</script>
+<script type="text/javascript" src="http://fa.jd.com/loadFa_toJson.js?aid=2_145_764-2_145_837"></script>
+<script type="text/javascript" async="true" charset="GBK" src="http://autorank.jd.com/v2.php?ad_type=1&keyword=670-671-672&ad_ids=3,2,6&page=1&page_count=4"></script>
+<script type="text/javascript" src="http://www.jd.com/hotwords.aspx?Position=A-computer-011"></script>
+
+<script  type="text/javascript">
+    (function(){
+        var loc = jd.plist.cookieEditer.getCookie("ipLoc-djd");
+        $.ajax({url:'http://uprofile.jd.com/u/setadds',type:'get',dataType:'jsonp',data:{adds:loc}});
+    })();
+</script>
+<script type="text/javascript" src="http://wl.jd.com/wl.js"></script>
+<script type="text/javascript">
+    var _mvq = _mvq || [];
+    _mvq.push(['$setAccount', 'm-9-1']);
+    _mvq.push(['$logConversion']);
+    (function() {
+        var mvl = document.createElement('script');
+        mvl.type = 'text/javascript'; mvl.async = true;
+        mvl.src = 'http://misc.360buyimg.com/lib/js/2012/mvl.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(mvl, s);
+    })();
+</script>
+
+
+</body>
+</html>
